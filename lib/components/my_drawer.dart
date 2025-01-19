@@ -33,7 +33,7 @@ class MyDrawer extends StatelessWidget {
           ),
           MyListTile(
             title: 'Cart',
-            icon: Icons.home,
+            icon: Icons.shopping_cart,
             onTap: () {
               Navigator.pop(context);
               Navigator.pushReplacementNamed(context, '/cart_page');

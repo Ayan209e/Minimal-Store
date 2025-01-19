@@ -25,6 +25,23 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 0,
       backgroundColor: Colors.transparent,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
+      actions: title.contains("Shop")
+          ? [
+              IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/cart_page');
+                },
+              ),
+            ]
+          : [
+              IconButton(
+                icon: Icon(Icons.home),
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, '/shop_page');
+                },
+              ),
+            ],
     );
   }
 }
